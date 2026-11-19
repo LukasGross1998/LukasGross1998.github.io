@@ -34,9 +34,9 @@
   $("about-text").append(...S.about.map((p) => el("p", {}, p)));
   $("stats").append(...(S.stats || []).map((s) => el("div", { class: "stat" }, el("strong", {}, s.value), el("span", {}, s.label))));
 
-  // Erfahrung
-  $("timeline").append(
-    ...S.experience.map((x) =>
+  // Werdegang & Ausbildung (gleiche Timeline-Optik)
+  const timeline = (list = []) =>
+    list.map((x) =>
       el("li", { class: "tl-item reveal" },
         el("span", { class: "tl-period" }, x.period),
         el("h3", {}, x.title),
@@ -44,8 +44,9 @@
         x.points?.length ? el("ul", {}, x.points.map((p) => el("li", {}, p))) : null,
         x.tags?.length ? tags(x.tags) : null
       )
-    )
-  );
+    );
+  $("timeline").append(...timeline(S.experience));
+  $("education-timeline").append(...timeline(S.education));
 
   // Projekte (kompakt, Details aufklappbar)
   const grid = $("project-grid");
@@ -171,8 +172,19 @@
   $("contact-email").textContent = c.email;
   $("contact-email").href = `mailto:${c.email}`;
   const cl = validLinks(c.links).map((l) => el("a", { href: l.url, target: "_blank", rel: "noopener" }, l.label));
-  if (c.cv) cl.push(el("a", { href: c.cv, download: "" }, "Lebenslauf (PDF)"));
   $("contact-links").append(...cl);
+  // Lebenslauf: Buttons nur zeigen, wenn die Datei wirklich existiert
+  if (c.cv) {
+    fetch(c.cv, { method: "HEAD" }).then((r) => {
+      if (!r.ok) return;
+      const btn = $("hero-secondary");
+      btn.textContent = "Lebenslauf (PDF)";
+      btn.href = c.cv;
+      btn.target = "_blank";
+      btn.rel = "noopener";
+      $("contact-links").append(el("a", { href: c.cv, target: "_blank", rel: "noopener" }, "Lebenslauf (PDF)"));
+    }).catch(() => {});
+  }
   $("footer-text").textContent = `© ${new Date().getFullYear()} ${S.name}`;
 
   // Theme-Umschalter

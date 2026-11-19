@@ -7,16 +7,16 @@
  */
 window.SITE = {
   name: "Lukas Gross",
-  role: "Software Engineer · Data & Cloud",
+  role: "Software Engineer · Integration, Data & Cloud",
   location: "Leopoldshafen, Baden-Württemberg",
-  tagline: "", // leer = ausgeblendet
+  tagline: "Ich verbinde Fachprozesse mit Technik – über Schnittstellen, Daten und Cloud.", // leer = ausgeblendet
   availability: "", // z. B. "Offen für neue Positionen" – leer = ausgeblendet
-  focus: ["Cloud", "Platform Engineering", "AI Engineering"],
+  focus: ["Integration & APIs", "Cloud-Architektur", "Platform Engineering", "AI Engineering"],
 
   about: [
-    "Mich interessiert, wie Unternehmen funktionieren – und wie Software und Daten sie besser machen. Mein Hintergrund liegt in Logistik und Supply Chain Management, über ein Data-Science-Studium bin ich in die Softwareentwicklung gekommen.",
-    "Heute arbeite ich an der Schnittstelle von Fachprozessen und Technik: Ich verbinde Systeme, arbeite viel mit Daten und Datenbanken und bringe Anwendungen in die Cloud. Dabei hilft mir, dass ich die Prozesse dahinter aus der Praxis kenne und zwischen Fachbereich und IT übersetzen kann.",
-    "Als Nächstes möchte ich mich in Richtung Cloud, Platform Engineering und AI Engineering weiterentwickeln: Plattformen aufbauen, auf denen Daten- und KI-Anwendungen zuverlässig laufen.",
+    "Mich interessiert, wie Unternehmen funktionieren – und wie Software und Daten sie besser machen. Mein Weg begann in Logistik und Supply Chain Management, über ein Data-Science-Studium bin ich in die Softwareentwicklung gekommen.",
+    "Heute arbeite ich an der Schnittstelle von Fachprozessen und Technik: Ich entwickle ERP-Schnittstellen, arbeite viel mit Daten und Datenbanken und begleite den Umzug von Anwendungen in die Cloud. Dabei hilft mir, dass ich die Prozesse dahinter aus der Praxis kenne.",
+    "Diesen Weg gehe ich konsequent weiter: Integrationen und Datenflüsse auf Cloud-Plattformen bringen, auf denen auch Daten- und KI-Anwendungen zuverlässig laufen – und perspektivisch die Architektur solcher Lösungen verantworten. Mein Vorteil dabei ist, zwischen Fachbereich und IT übersetzen zu können: Gute Architektur beginnt beim Verständnis des Prozesses.",
   ],
 
   stats: [
@@ -27,29 +27,43 @@ window.SITE = {
   experience: [
     {
       period: "Okt 2024 – heute",
-      title: "Software-Entwickler",
+      title: "Software Engineer",
       company: "Infor",
       location: "Remote (Leipzig)",
       points: [
-        "Modulverantwortlicher für das Modul Schnittstellen: Entwicklung und Betreuung der REST-APIs (JSON/XML), über die Drittsysteme Daten mit dem ERP Infor CloudSuite austauschen",
-        "Datenanalyse, Fehlersuche und Datenabgleich mit SQL auf Oracle-Datenbanken",
-        "Mitarbeit am Umzug in die AWS European Sovereign Cloud",
-        "Komponenten mit Amazon Kiro (KI-gestützte Entwicklungsumgebung) für die neue Cloud-Umgebung nutzbar machen",
+        "Modulverantwortlicher für das Modul Schnittstellen: Entwicklung und Betreuung der REST-APIs (JSON/XML), über die Drittsysteme Daten mit dem ERP Infor LN (CloudSuite Industrial) austauschen",
+        "Daten mit SQL auf Oracle-Datenbanken analysieren, Fehler eingrenzen und Datenstände abgleichen, damit ERP und angebundene Systeme konsistent bleiben",
+        "Den Umzug in die AWS European Sovereign Cloud mitgestalten",
+        "Bestehende Komponenten mithilfe der KI-gestützten Entwicklungsumgebung Amazon Kiro an die neue Cloud-Umgebung anpassen",
       ],
-      tags: ["Modulverantwortung", "Infor CloudSuite", "ERP", "REST APIs", "JSON / XML", "Oracle SQL", "AWS", "Kiro"],
+      tags: ["Modulverantwortung", "Infor LN", "ERP", "REST APIs", "JSON / XML", "Oracle SQL", "AWS", "Kiro"],
     },
     {
       period: "Jul 2023 – Apr 2025",
-      title: "Werkstudent Business Intelligence & Software Engineering",
+      title: "Werkstudent Business Intelligence & Software Engineering (Teilzeit)",
       company: "LECARE",
       location: "Remote (Hamburg)",
       points: [
-        "Konzeption und Entwicklung von Power-BI-Dashboards, die Kennzahlen aus dem operativen Geschäft für Management und Fachbereiche sichtbar machen",
-        "Aufbau einer zentralen PostgreSQL-Datenbank als Reporting-Schicht: Datenmodellierung, SQL-Views und Abfragen als Grundlage für die Dashboards",
-        "Prozessautomatisierung mit Make und Airtable: Daten aus den operativen Tools per API und Webhooks erfassen, aufbereiten und automatisiert in PostgreSQL laden",
+        "Power-BI-Dashboards konzipiert und entwickelt, die Kennzahlen aus dem operativen Geschäft für Management und Fachbereiche sichtbar machen",
+        "Zentrale PostgreSQL-Datenbank als Reporting-Schicht aufgebaut – Datenmodell, SQL-Views und Abfragen als gemeinsame Grundlage der Dashboards",
+        "Datenflüsse mit Make und Airtable automatisiert: Daten aus operativen Tools per API und Webhooks erfasst, aufbereitet und in PostgreSQL geladen",
       ],
       tags: ["Power BI", "PostgreSQL", "SQL", "Make", "Airtable", "APIs"],
     },
+    {
+      period: "Dez 2018 – Apr 2020",
+      title: "Werkstudent Logistik",
+      company: "BASF SE · Daimler AG",
+      location: "Ludwigshafen · Wörth am Rhein",
+      points: [
+        "BASF, Logistikplanung (Nov 2019 – Apr 2020): Umzug und Inbetriebnahme eines neuen Lagers mitgestaltet – von der Auswahl der Lagerhilfsmittel über das Verhandeln von Lieferantenangeboten bis zur Sicherheitsunterweisung",
+        "Daimler, Lagerlogistik (Dez 2018 – Mai 2019): Einsatz im Kommissions- und Produktionsbereich",
+      ],
+      tags: ["Logistik", "Beschaffung", "Projektarbeit"],
+    },
+  ],
+
+  education: [
     {
       period: "Sep 2022 – Jul 2024",
       title: "M.Sc. Data Science and Advanced Analytics",
@@ -64,11 +78,11 @@ window.SITE = {
     },
     {
       period: "Nov 2021 – Jan 2022",
-      title: "Bachelorand – Nachhaltige Gebäudeplanung",
+      title: "Bachelorarbeit – nachhaltige Logistikzentren",
       company: "BSH Hausgeräte AG",
       location: "Fürth",
       points: [
-        "Bachelorarbeit „Sustainable Warehouse“: nachhaltige Gestaltung von Logistikzentren am Beispiel des zentralen Lagers der BSH",
+        "„Sustainable Warehouse“: nachhaltige Gestaltung von Logistikzentren am Beispiel des zentralen Lagers der BSH",
       ],
       tags: ["Logistik", "Nachhaltigkeit"],
     },
@@ -79,26 +93,6 @@ window.SITE = {
       location: "Ludwigshafen",
       points: ["Logistik, Materialwirtschaft und Supply Chain Management mit SAP ERP"],
       tags: ["SAP ERP", "Supply Chain"],
-    },
-    {
-      period: "Nov 2019 – Apr 2020",
-      title: "Werkstudent Logistikplanung",
-      company: "BASF SE",
-      location: "Ludwigshafen",
-      points: [
-        "Mitarbeit an Lagerumzug und Inbetriebnahme eines neuen Lagers – von der Auswahl der Lagerhilfsmittel bis zur Bestandsaufnahme",
-        "Eigenverantwortliches Einholen und Verhandeln von Angeboten bei Lieferanten",
-        "Erstellung der Sicherheitsunterweisung für das neue Lagergebäude",
-      ],
-      tags: ["Logistik", "Beschaffung", "Projektarbeit"],
-    },
-    {
-      period: "Dez 2018 – Mai 2019",
-      title: "Werkstudent Lagerlogistik",
-      company: "Daimler AG",
-      location: "Wörth am Rhein",
-      points: ["Werkstudententätigkeit im Kommissions- und Produktionsbereich"],
-      tags: ["Logistik"],
     },
   ],
 
@@ -138,7 +132,7 @@ window.SITE = {
     {
       title: "Masterarbeit: Anomalieerkennung in Blockchain-Preisfeeds",
       summary:
-        "DeFi-Anwendungen verlassen sich auf Preisfeeds von Blockchain-Oracles. Fehlerhafte Feeds haben bereits Schäden in zweistelliger Millionenhöhe verursacht. In meiner Masterarbeit an der NOVA IMS habe ich die stündliche ETH/USD-Zeitreihe von Chainlink über zwei Jahre analysiert und zehn Verfahren der Anomalieerkennung verglichen: klassisches Machine Learning gegen Streaming-Algorithmen, die Daten in Echtzeit verarbeiten. Ergebnis: Die Streaming-Verfahren schneiden am besten ab (F1 0,24, Recall bis 0,84), aber die hohe Volatilität von Kryptomärkten hält die Leistung noch unter dem, was für den produktiven Einsatz nötig wäre.",
+        "Kernergebnis: Streaming-Verfahren, die Daten in Echtzeit verarbeiten, erkennen Anomalien in Blockchain-Preisfeeds am besten (F1 0,24, Recall bis 0,84). Für den produktiven Einsatz reicht die Leistung bei der hohen Volatilität von Kryptomärkten aber noch nicht aus. Dafür habe ich an der NOVA IMS die stündliche ETH/USD-Zeitreihe von Chainlink über zwei Jahre analysiert und zehn Verfahren verglichen – klassisches Machine Learning gegen Streaming-Algorithmen. Hintergrund: DeFi-Anwendungen verlassen sich auf Preisfeeds von Blockchain-Oracles, und fehlerhafte Feeds haben bereits Schäden in zweistelliger Millionenhöhe verursacht.",
       tags: ["Zeitreihenanalyse", "Anomalieerkennung", "Python", "scikit-learn", "TensorFlow", "Streaming ML"],
       images: [
         { src: "images/thesis_eth_anomalies.jpg", caption: "ETH/USD-Kurs (stündlich, Chainlink) mit den eingefügten Test-Anomalien (rot), die die Modelle finden mussten" },
@@ -183,11 +177,12 @@ window.SITE = {
   ],
 
   skills: [
-    { group: "Programmierung", items: ["Python", "SQL", "Oracle SQL", "PostgreSQL", "pandas", "Git"] },
-    { group: "Data Science", items: ["Machine Learning", "Anomalieerkennung", "scikit-learn", "TensorFlow / Keras", "Optimierung (LP)"] },
+    { group: "Programmierung", items: ["Python", "SQL (Oracle, PostgreSQL)", "pandas", "Git"] },
+    { group: "Integration & Architektur", items: ["REST APIs", "JSON / XML", "ERP-Schnittstellen", "Infor LN", "Webhooks"] },
+    { group: "Cloud & Plattform", items: ["AWS", "Docker", "CI/CD (GitHub Actions)", "Kiro"] },
     { group: "Data Engineering & BI", items: ["dbt", "DuckDB", "Power BI", "Dash / Plotly", "Airtable", "Make"] },
-    { group: "Cloud & Plattform", items: ["AWS", "Sovereign Cloud", "REST APIs", "JSON / XML", "Docker", "CI/CD (GitHub Actions)", "Kiro"] },
-    { group: "Domäne", items: ["ERP (Infor CloudSuite, SAP)", "Supply Chain", "Logistik", "Beschaffung", "Welthandel"] },
+    { group: "Data Science", items: ["Machine Learning", "Anomalieerkennung", "scikit-learn", "TensorFlow / Keras", "Optimierung (LP)"] },
+    { group: "Domäne", items: ["ERP (Infor LN, SAP)", "Supply Chain", "Logistik", "Beschaffung", "Welthandel"] },
     { group: "Sprachen", items: ["Deutsch (Muttersprache)", "Englisch (verhandlungssicher)"] },
   ],
 
@@ -196,12 +191,12 @@ window.SITE = {
   ],
 
   contact: {
-    text: "Du suchst jemanden, der Daten, Lieferketten und Cloud zusammenbringt? Ich freue mich über deine Nachricht.",
+    text: "Für Rollen in Cloud, Integration, Platform oder AI Engineering freue ich mich über eine Nachricht.",
     email: "lukas.s.gross@web.de",
     links: [
       { label: "LinkedIn", url: "https://www.linkedin.com/in/lukas-gross-03b983209/" },
       { label: "GitHub", url: "https://github.com/LukasGross1998" },
     ],
-    cv: "", // z. B. "lebenslauf.pdf" – Datei in denselben Ordner legen
+    cv: "lebenslauf.pdf", // Datei in denselben Ordner legen – die Buttons erscheinen erst, wenn sie existiert
   },
 };

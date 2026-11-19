@@ -3,12 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio</title>
-  <meta name="description" content="Persönliche Website – Erfahrung und Projekte" />
+  <title>Lukas Gross – Software Engineer · Integration, Data & Cloud</title>
+  <meta name="description" content="Lukas Gross – Software Engineer für Integration, Daten und Cloud: von Logistik und Supply Chain über Data Science zu ERP-Schnittstellen und AWS. AWS Certified Solutions Architect – Associate." />
+  <link rel="canonical" href="https://lukasgross1998.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:url" content="https://lukasgross1998.github.io/" />
+  <meta property="og:title" content="Lukas Gross – Software Engineer · Integration, Data & Cloud" />
+  <meta property="og:description" content="Lukas Gross – Software Engineer für Integration, Daten und Cloud: von Logistik und Supply Chain über Data Science zu ERP-Schnittstellen und AWS. AWS Certified Solutions Architect – Associate." />
+  <meta property="og:image" content="https://lukasgross1998.github.io/images/dashboard_situation.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lukas Gross – Software Engineer · Integration, Data & Cloud" />
+  <meta name="twitter:description" content="Lukas Gross – Software Engineer für Integration, Daten und Cloud: von Logistik und Supply Chain über Data Science zu ERP-Schnittstellen und AWS. AWS Certified Solutions Architect – Associate." />
+  <meta name="twitter:image" content="https://lukasgross1998.github.io/images/dashboard_situation.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=9" />
   <script>
     // Theme vor dem Rendern setzen (kein Aufblitzen)
     try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -21,6 +32,7 @@
       <nav class="nav-links" id="nav-links">
         <a href="#about">Über mich</a>
         <a href="#experience">Werdegang</a>
+        <a href="#education">Ausbildung</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projekte</a>
         <a href="#contact">Kontakt</a>
@@ -41,8 +53,8 @@
       <div class="focus" id="focus"></div>
       <div class="hero-certs" id="hero-certs"></div>
       <div class="hero-cta">
-        <a href="#about" class="btn btn-primary">Über mich</a>
-        <a href="#contact" class="btn btn-ghost">Kontakt</a>
+        <a href="#projects" class="btn btn-primary">Projekte ansehen</a>
+        <a href="#contact" class="btn btn-ghost" id="hero-secondary">Kontakt</a>
       </div>
     </section>
 
@@ -59,18 +71,23 @@
       <ol id="timeline" class="timeline"></ol>
     </section>
 
+    <section id="education" class="section wrap">
+      <h2 class="section-title"><span>03</span> Ausbildung</h2>
+      <ol id="education-timeline" class="timeline"></ol>
+    </section>
+
     <section id="skills" class="section wrap">
-      <h2 class="section-title"><span>03</span> Skills</h2>
+      <h2 class="section-title"><span>04</span> Skills</h2>
       <div id="skill-groups" class="skill-groups"></div>
       <div id="certs" class="certs"></div>
     </section>
     <section id="projects" class="section wrap">
-      <h2 class="section-title"><span>04</span> Ausgewählte Projekte</h2>
+      <h2 class="section-title"><span>05</span> Ausgewählte Projekte</h2>
       <div id="project-grid" class="project-grid"></div>
     </section>
 
     <section id="contact" class="section wrap contact">
-      <h2 class="section-title"><span>05</span> Kontakt</h2>
+      <h2 class="section-title"><span>06</span> Kontakt</h2>
       <p id="contact-text" class="contact-text"></p>
       <a id="contact-email" class="btn btn-primary btn-lg"></a>
       <div id="contact-links" class="contact-links"></div>
@@ -81,7 +98,7 @@
     <p id="footer-text"></p>
   </footer>
 
-  <script src="content.js?v=8"></script>
-  <script src="main.js?v=8"></script>
+  <script src="content.js?v=9"></script>
+  <script src="main.js?v=9"></script>
 </body>
 </html>
