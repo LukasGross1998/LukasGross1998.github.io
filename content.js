@@ -34,12 +34,12 @@ window.SITE = {
       company: "Infor",
       location: "Remote (Leipzig)",
       points: [
-        "Entwicklung und Betreuung von Schnittstellen, über die Drittsysteme an das ERP Infor CloudSuite angebunden werden",
+        "Entwicklung und Betreuung von REST-Schnittstellen mit JSON und XML, über die Drittsysteme an das ERP Infor CloudSuite angebunden werden",
         "Intensive Arbeit mit Oracle-Datenbanken: SQL-Abfragen für Datenanalyse, Fehlersuche und Datenabgleich zwischen ERP und angebundenen Systemen",
         "Mitarbeit am Umzug in die AWS European Sovereign Cloud",
         "Komponenten mit Amazon Kiro (KI-gestützte Entwicklungsumgebung) für die neue Cloud-Umgebung nutzbar machen",
       ],
-      tags: ["Infor CloudSuite", "ERP", "Schnittstellen / APIs", "Oracle SQL", "AWS", "Kiro"],
+      tags: ["Infor CloudSuite", "ERP", "REST APIs", "JSON / XML", "Oracle SQL", "AWS", "Kiro"],
     },
     {
       period: "Jul 2023 – Apr 2025",
@@ -151,7 +151,7 @@ window.SITE = {
     { group: "Programmierung", items: ["Python", "SQL", "Oracle SQL", "PostgreSQL", "pandas", "Git"] },
     { group: "Data Science", items: ["Machine Learning", "Anomalieerkennung", "scikit-learn", "TensorFlow / Keras", "Optimierung (LP)"] },
     { group: "Data Engineering & BI", items: ["dbt", "DuckDB", "Power BI", "Dash / Plotly", "Airtable", "Make"] },
-    { group: "Cloud & Plattform", items: ["AWS", "Sovereign Cloud", "APIs", "Docker", "CI/CD (GitHub Actions)", "Kiro"] },
+    { group: "Cloud & Plattform", items: ["AWS", "Sovereign Cloud", "REST APIs", "JSON / XML", "Docker", "CI/CD (GitHub Actions)", "Kiro"] },
     { group: "Domäne", items: ["ERP (Infor CloudSuite, SAP)", "Supply Chain", "Logistik", "Beschaffung", "Welthandel"] },
     { group: "Sprachen", items: ["Deutsch (Muttersprache)", "Englisch (verhandlungssicher)"] },
   ],
