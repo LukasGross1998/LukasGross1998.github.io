@@ -20,7 +20,7 @@
   $("hero-name").textContent = S.name;
   $("hero-role").textContent = S.role;
   if (S.location) $("hero-role").append(el("span", { class: "hero-location" }, `📍 ${S.location}`));
-  $("hero-tagline").textContent = S.tagline;
+  if (S.tagline) $("hero-tagline").textContent = S.tagline; else $("hero-tagline").remove();
   $("availability").textContent = S.availability || "";
   (S.certifications || []).forEach((x) => {
     const inner = [el("span", { class: "hero-cert-check", "aria-hidden": "true" }, "✓"), el("span", {}, x.name), x.url ? el("span", { class: "hero-cert-arrow", "aria-hidden": "true" }, "↗") : null];
@@ -29,14 +29,6 @@
       : el("span", { class: "hero-cert" }, ...inner));
   });
   if (S.focus?.length) $("focus").append(el("span", { class: "focus-label" }, "Fokus"), ...S.focus.map((f) => el("span", { class: "focus-chip" }, f)));
-
-  // Entwicklung in Etappen
-  $("journey").append(...(S.journey || []).map((j, i) =>
-    el("li", { class: "journey-step reveal" + (j.current ? " current" : "") },
-      el("span", { class: "journey-period" }, j.period),
-      el("strong", {}, j.title),
-      el("span", { class: "journey-where" }, j.where),
-      el("p", {}, j.text))));
 
   // Über mich
   $("about-text").append(...S.about.map((p) => el("p", {}, p)));
