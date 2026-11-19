@@ -22,6 +22,12 @@
   if (S.location) $("hero-role").append(el("span", { class: "hero-location" }, `📍 ${S.location}`));
   $("hero-tagline").textContent = S.tagline;
   $("availability").textContent = S.availability || "";
+  (S.certifications || []).forEach((x) => {
+    const inner = [el("span", { class: "hero-cert-check", "aria-hidden": "true" }, "✓"), el("span", {}, x.name), x.url ? el("span", { class: "hero-cert-arrow", "aria-hidden": "true" }, "↗") : null];
+    $("hero-certs").append(x.url
+      ? el("a", { class: "hero-cert", href: x.url, target: "_blank", rel: "noopener", title: "Nachweis auf Credly ansehen" }, ...inner)
+      : el("span", { class: "hero-cert" }, ...inner));
+  });
   if (S.focus?.length) $("focus").append(el("span", { class: "focus-label" }, "Fokus"), ...S.focus.map((f) => el("span", { class: "focus-chip" }, f)));
 
   // Über mich
