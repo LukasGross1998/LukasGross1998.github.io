@@ -16,7 +16,7 @@ window.SITE = {
 
   about: [
     "Angefangen habe ich dort, wo Waren tatsächlich bewegt werden: als Werkstudent in der Lagerlogistik bei Daimler, in der Logistikplanung der BASF und mit meiner Bachelorarbeit zu nachhaltigen Logistikzentren bei BSH. Im Studium der Logistik und des Supply Chain Managements habe ich gelernt, wie eng Lager, Einkauf, Transport und Produktion zusammenhängen.",
-    "Dabei wurde mir schnell klar: Die spannendsten Hebel stecken in den Daten und in der Software dahinter. Also bin ich für den Master in Data Science and Advanced Analytics nach Lissabon gegangen, habe nebenher bei LECARE Dashboards und datengetriebene Software-Lösungen entwickelt und bin danach als Software-Entwickler bei Infor gelandet – einem Anbieter von Unternehmenssoftware, unter anderem für Supply Chain und Produktion.",
+    "Dabei wurde mir schnell klar: Die spannendsten Hebel stecken in den Daten und in der Software dahinter. Also bin ich für den Master in Data Science and Advanced Analytics nach Lissabon gegangen, habe nebenher bei LECARE Dashboards und datengetriebene Software-Lösungen entwickelt und bin danach als Software-Entwickler bei Infor gelandet – einem Anbieter von ERP- und Unternehmenssoftware, unter anderem für Supply Chain und Produktion. Dort binde ich Systeme an die Infor CloudSuite an und arbeite täglich mit SQL auf Oracle-Datenbanken.",
     "Für mich gehören beide Welten zusammen. Wer versteht, wie eine Lieferkette funktioniert, baut bessere Datenmodelle, Schnittstellen und Tools für sie. Genau das zeigt auch mein Supply-Chain-Dashboard, das Handels-, Schiffs- und Marktdaten zu einem Lagebild für Einkäufer verbindet.",
     "Als Nächstes zieht es mich tiefer in Cloud, Platform Engineering und AI Engineering: Plattformen bauen, auf denen Daten- und KI-Anwendungen zuverlässig laufen. Die Grundlage dafür ist die Zertifizierung als AWS Solutions Architect – Associate.",
   ],
@@ -34,11 +34,12 @@ window.SITE = {
       company: "Infor",
       location: "Remote (Leipzig)",
       points: [
-        "Entwicklung und Betreuung von API-Schnittstellen",
+        "Entwicklung und Betreuung von Schnittstellen, über die Drittsysteme an das ERP Infor CloudSuite angebunden werden",
+        "Intensive Arbeit mit Oracle-Datenbanken: SQL-Abfragen für Datenanalyse, Fehlersuche und Datenabgleich zwischen ERP und angebundenen Systemen",
         "Mitarbeit am Umzug in die AWS European Sovereign Cloud",
         "Komponenten mit Amazon Kiro (KI-gestützte Entwicklungsumgebung) für die neue Cloud-Umgebung nutzbar machen",
       ],
-      tags: ["APIs", "AWS", "Sovereign Cloud", "Kiro"],
+      tags: ["Infor CloudSuite", "ERP", "Schnittstellen / APIs", "Oracle SQL", "AWS", "Kiro"],
     },
     {
       period: "Jul 2023 – Apr 2025",
@@ -147,11 +148,11 @@ window.SITE = {
   ],
 
   skills: [
-    { group: "Programmierung", items: ["Python", "SQL", "PostgreSQL", "pandas", "Git"] },
+    { group: "Programmierung", items: ["Python", "SQL", "Oracle SQL", "PostgreSQL", "pandas", "Git"] },
     { group: "Data Science", items: ["Machine Learning", "Anomalieerkennung", "scikit-learn", "TensorFlow / Keras", "Optimierung (LP)"] },
     { group: "Data Engineering & BI", items: ["dbt", "DuckDB", "Power BI", "Dash / Plotly", "Airtable", "Make"] },
     { group: "Cloud & Plattform", items: ["AWS", "Sovereign Cloud", "APIs", "Docker", "CI/CD (GitHub Actions)", "Kiro"] },
-    { group: "Domäne", items: ["Supply Chain", "Logistik", "SAP ERP", "Beschaffung", "Welthandel"] },
+    { group: "Domäne", items: ["ERP (Infor CloudSuite, SAP)", "Supply Chain", "Logistik", "Beschaffung", "Welthandel"] },
     { group: "Sprachen", items: ["Deutsch (Muttersprache)", "Englisch (verhandlungssicher)"] },
   ],
 
