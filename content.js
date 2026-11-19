@@ -139,11 +139,49 @@ window.SITE = {
       featured: true,
     },
     {
-      title: "Anomalieerkennung in Blockchain-Oracle-Preisfeeds",
+      title: "Masterarbeit: Anomalieerkennung in Blockchain-Preisfeeds",
       summary:
-        "Masterarbeit: DeFi-Plattformen verlassen sich auf Preisfeeds von Blockchain-Oracles – fehlerhafte Feeds haben bereits Schäden in zweistelliger Millionenhöhe verursacht. Ich habe zehn Verfahren auf dem ETH/USD-Feed von Chainlink verglichen: klassisches ML (u. a. Isolation Forest, One-Class SVM, DBSCAN, LSTM-Autoencoder) gegen Streaming-Algorithmen (Half-Space Trees, Sliding-Window-kNN, Robust Random Cut Forest). Ergebnis: Streaming-Verfahren schneiden besser ab (F1 0,24 vs. 0,20; Recall bis 0,84), aber die Volatilität von Kryptomärkten hält die Gesamtleistung noch unter dem, was für den produktiven Einsatz nötig wäre.",
-      tags: ["Python", "scikit-learn", "TensorFlow", "Streaming ML", "Blockchain"],
+        "DeFi-Anwendungen verlassen sich auf Preisfeeds von Blockchain-Oracles. Fehlerhafte Feeds haben bereits Schäden in zweistelliger Millionenhöhe verursacht. In meiner Masterarbeit an der NOVA IMS habe ich die stündliche ETH/USD-Zeitreihe von Chainlink über zwei Jahre analysiert und zehn Verfahren der Anomalieerkennung verglichen: klassisches Machine Learning gegen Streaming-Algorithmen, die Daten in Echtzeit verarbeiten. Ergebnis: Die Streaming-Verfahren schneiden am besten ab (F1 0,24, Recall bis 0,84), aber die hohe Volatilität von Kryptomärkten hält die Leistung noch unter dem, was für den produktiven Einsatz nötig wäre.",
+      tags: ["Zeitreihenanalyse", "Anomalieerkennung", "Python", "scikit-learn", "TensorFlow", "Streaming ML"],
+      images: [
+        { src: "images/thesis_eth_anomalies.jpg", caption: "ETH/USD-Kurs (stündlich, Chainlink) mit den eingefügten Test-Anomalien (rot), die die Modelle finden mussten" },
+      ],
+      results: {
+        title: "Ergebnis: Welches Verfahren findet die Anomalien am besten?",
+        metrics: [
+          { key: "f1", label: "F1-Score", hint: "Balance aus Treffsicherheit und Vollständigkeit (Hauptkennzahl)" },
+          { key: "recall", label: "Recall", hint: "Anteil der echten Anomalien, die gefunden wurden" },
+        ],
+        groups: [
+          { label: "Streaming (Echtzeit)", highlight: true, rows: [
+            { label: "Half-Space Trees", f1: 0.24, recall: 0.25 },
+            { label: "Sliding-Window-kNN", f1: 0.23, recall: 0.84 },
+            { label: "Robust Random Cut Forest", f1: 0.13, recall: 0.22 },
+          ] },
+          { label: "Klassisches ML", rows: [
+            { label: "Isolation Forest", f1: 0.20, recall: 0.62 },
+            { label: "Self-Organizing Map", f1: 0.19, recall: 0.27 },
+            { label: "k-Nearest Neighbors", f1: 0.18, recall: 0.11 },
+            { label: "LSTM-Autoencoder", f1: 0.18, recall: 0.18 },
+            { label: "One-Class SVM", f1: 0.17, recall: 0.40 },
+            { label: "DBSCAN", f1: 0.16, recall: 0.34 },
+            { label: "K-Means", f1: 0.14, recall: 0.28 },
+          ] },
+        ],
+      },
+      pipeline: {
+        title: "So bin ich vorgegangen",
+        steps: [
+          { title: "Zeitreihe", text: "Stündliche ETH/USD-Preise des Chainlink-Oracles, Mai 2021 bis Mai 2023: rund 17.300 Datenpunkte.", tech: "Chainlink · pandas" },
+          { title: "Vorverarbeitung", text: "Auf ein festes Stundenraster gebracht, Lücken interpoliert und 1 % künstliche Anomalien als Testfälle eingefügt.", tech: "pandas · NumPy" },
+          { title: "Feature Engineering", text: "Zwölf Finanzindikatoren berechnet (u. a. gleitende Mittel, Volatilität, RSI, Bollinger-Bänder, MACD) und die aussagekräftigsten ausgewählt.", tech: "scikit-learn" },
+          { title: "Modelle", text: "Sieben klassische Verfahren und drei Streaming-Algorithmen trainiert und ihre Parameter per Kreuzvalidierung für Zeitreihen optimiert.", tech: "scikit-learn · Keras · river" },
+          { title: "Bewertung", text: "Alle Verfahren auf ungesehenen Testdaten verglichen, mit F1-Score als Hauptkennzahl und Recall als zweiter.", tech: "F1 · Recall" },
+        ],
+        note: "Betreuer: Prof. Fernando Bação, NOVA IMS Lissabon.",
+      },
       links: [],
+      featured: true,
     },
   ],
 

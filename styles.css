@@ -268,3 +268,25 @@ a { color: inherit; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 12px 0; font-size: 17px; }
 }
+
+/* Ergebnis-Diagramm (Balken) */
+.rchart-wrap { border-top: 1px solid var(--border); padding-top: 20px; margin-top: 4px; }
+.rchart-wrap h4 { margin: 0 0 12px; font-size: 16px; }
+.rchart-toggle { margin-bottom: 8px; }
+.project .rchart-hint { margin: 0 0 14px; font-size: 13.5px; flex: none; }
+.rchart { display: grid; gap: 18px; }
+.rgroup-label { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 6px; }
+.rrow { display: grid; grid-template-columns: minmax(120px, 210px) 1fr 44px; align-items: center; gap: 12px; padding: 4px 6px; margin: 0 -6px; border-radius: 6px; }
+.rrow:hover, .rrow:focus-visible { background: var(--accent-soft); outline: none; }
+.rrow-label { font-size: 14px; }
+.rrow-track { height: 12px; }
+.rrow-bar { display: block; height: 100%; border-radius: 0 4px 4px 0; background: var(--muted); opacity: .45; transition: width .4s ease; }
+.rgroup.hl .rrow-bar { background: var(--accent); opacity: .85; }
+.rrow.best .rrow-label { font-weight: 600; }
+.rrow.best .rrow-bar { opacity: 1; }
+.rrow-val { font-family: var(--mono); font-size: 13px; text-align: right; color: var(--text); }
+@media (max-width: 760px) {
+  .rrow { grid-template-columns: 1fr 44px; gap: 4px 10px; }
+  .rrow-label { grid-column: 1 / -1; }
+  .rrow-track { grid-column: 1; }
+}

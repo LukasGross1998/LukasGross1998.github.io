@@ -78,6 +78,42 @@
       show(0);
     }
 
+    let results = null;
+    if (p.results?.groups?.length) {
+      const R = p.results;
+      const all = R.groups.flatMap((g) => g.rows);
+      const chart = el("div", { class: "rchart" });
+      const hint = el("p", { class: "rchart-hint" });
+      const toggle = el("div", { class: "filters rchart-toggle", role: "group", "aria-label": "Kennzahl wählen" });
+      const draw = (m) => {
+        const max = Math.max(...all.map((r) => r[m.key]));
+        const scale = Math.ceil(max * 10) / 10;
+        chart.replaceChildren(...R.groups.map((g) => {
+          const best = Math.max(...g.rows.map((r) => r[m.key]));
+          return el("div", { class: "rgroup" + (g.highlight ? " hl" : "") },
+            el("div", { class: "rgroup-label" }, g.label),
+            ...[...g.rows].sort((a, b) => b[m.key] - a[m.key]).map((r) => {
+              const v = r[m.key];
+              const other = R.metrics.filter((x) => x !== m).map((x) => `${x.label} ${r[x.key].toFixed(2)}`).join(" · ");
+              return el("div", { class: "rrow" + (v === best ? " best" : ""), tabindex: "0", title: `${r.label}: ${m.label} ${v.toFixed(2)} · ${other}` },
+                el("span", { class: "rrow-label" }, r.label),
+                el("span", { class: "rrow-track" }, el("span", { class: "rrow-bar", style: `width:${(v / scale) * 100}%` })),
+                el("span", { class: "rrow-val" }, v.toFixed(2).replace(".", ",")));
+            }));
+        }));
+        hint.textContent = m.hint || "";
+        toggle.querySelectorAll(".filter").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.key === m.key)));
+      };
+      R.metrics.forEach((m) => {
+        const b = el("button", { class: "filter", type: "button" }, m.label);
+        b.dataset.key = m.key;
+        b.addEventListener("click", () => draw(m));
+        toggle.append(b);
+      });
+      results = el("div", { class: "rchart-wrap" }, el("h4", {}, R.title), toggle, hint, chart);
+      draw(R.metrics[0]);
+    }
+
     let pipeline = null;
     if (p.pipeline?.steps?.length) {
       const pl = p.pipeline;
@@ -96,6 +132,7 @@
       el("h3", {}, p.title),
       el("p", {}, p.summary),
       tags(p.tags),
+      results,
       pipeline,
       validLinks(p.links).length
         ? el("div", { class: "project-links" },
