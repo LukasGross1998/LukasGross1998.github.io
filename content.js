@@ -46,11 +46,11 @@ window.SITE = {
       company: "LECARE",
       location: "Remote (Hamburg)",
       points: [
-        "Konzeption und Entwicklung von Dashboards, die Kennzahlen aus dem operativen Geschäft für Entscheider sichtbar machen",
-        "Aufbau der Datenmodelle dahinter und Anbindung verschiedener Systeme über APIs und Webhooks",
-        "Entwicklung automatisierter Workflows, die manuelle Abläufe ersetzen und Daten zuverlässig zwischen den Tools synchronisieren",
+        "Konzeption und Entwicklung von Power-BI-Dashboards, die Kennzahlen aus dem operativen Geschäft für Management und Fachbereiche sichtbar machen",
+        "Aufbau einer zentralen PostgreSQL-Datenbank als Reporting-Schicht: Datenmodellierung, SQL-Views und Abfragen als Grundlage für die Dashboards",
+        "Prozessautomatisierung mit Make und Airtable: Daten aus den operativen Tools per API und Webhooks erfassen, aufbereiten und automatisiert in PostgreSQL laden",
       ],
-      tags: ["Dashboards", "BI", "APIs", "Airtable", "Make"],
+      tags: ["Power BI", "PostgreSQL", "SQL", "Make", "Airtable", "APIs"],
     },
     {
       period: "Sep 2022 – Jul 2024",
@@ -147,7 +147,7 @@ window.SITE = {
   ],
 
   skills: [
-    { group: "Programmierung", items: ["Python", "SQL", "pandas", "Git"] },
+    { group: "Programmierung", items: ["Python", "SQL", "PostgreSQL", "pandas", "Git"] },
     { group: "Data Science", items: ["Machine Learning", "Anomalieerkennung", "scikit-learn", "TensorFlow / Keras", "Optimierung (LP)"] },
     { group: "Data Engineering & BI", items: ["dbt", "DuckDB", "Power BI", "Dash / Plotly", "Airtable", "Make"] },
     { group: "Cloud & Plattform", items: ["AWS", "Sovereign Cloud", "APIs", "Docker", "CI/CD (GitHub Actions)", "Kiro"] },
