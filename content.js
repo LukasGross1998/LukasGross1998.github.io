@@ -16,7 +16,7 @@ window.SITE = {
 
   about: [
     "Angefangen habe ich dort, wo Waren tatsächlich bewegt werden: als Werkstudent in der Lagerlogistik bei Daimler, in der Logistikplanung der BASF und mit meiner Bachelorarbeit zu nachhaltigen Logistikzentren bei BSH. Im Studium der Logistik und des Supply Chain Managements habe ich gelernt, wie eng Lager, Einkauf, Transport und Produktion zusammenhängen.",
-    "Dabei wurde mir schnell klar: Die spannendsten Hebel stecken in den Daten und in der Software dahinter. Also bin ich für den Master in Data Science and Advanced Analytics nach Lissabon gegangen, habe nebenher bei LECARE Prozesse automatisiert und BI aufgebaut und bin danach als Software-Entwickler bei Infor gelandet – einem Anbieter von Unternehmenssoftware, unter anderem für Supply Chain und Produktion.",
+    "Dabei wurde mir schnell klar: Die spannendsten Hebel stecken in den Daten und in der Software dahinter. Also bin ich für den Master in Data Science and Advanced Analytics nach Lissabon gegangen, habe nebenher bei LECARE Dashboards und datengetriebene Software-Lösungen entwickelt und bin danach als Software-Entwickler bei Infor gelandet – einem Anbieter von Unternehmenssoftware, unter anderem für Supply Chain und Produktion.",
     "Für mich gehören beide Welten zusammen. Wer versteht, wie eine Lieferkette funktioniert, baut bessere Datenmodelle, Schnittstellen und Tools für sie. Genau das zeigt auch mein Supply-Chain-Dashboard, das Handels-, Schiffs- und Marktdaten zu einem Lagebild für Einkäufer verbindet.",
     "Als Nächstes zieht es mich tiefer in Cloud, Platform Engineering und AI Engineering: Plattformen bauen, auf denen Daten- und KI-Anwendungen zuverlässig laufen. Die Grundlage dafür ist die Zertifizierung als AWS Solutions Architect – Associate.",
   ],
@@ -42,13 +42,15 @@ window.SITE = {
     },
     {
       period: "Jul 2023 – Apr 2025",
-      title: "Werkstudent Automation & Business Intelligence",
+      title: "Werkstudent Business Intelligence & Software Engineering",
       company: "LECARE",
       location: "Remote (Hamburg)",
       points: [
-        "Automatisierung von Geschäftsprozessen und Aufbau von BI-Auswertungen mit Airtable und Make",
+        "Konzeption und Entwicklung von Dashboards, die Kennzahlen aus dem operativen Geschäft für Entscheider sichtbar machen",
+        "Aufbau der Datenmodelle dahinter und Anbindung verschiedener Systeme über APIs und Webhooks",
+        "Entwicklung automatisierter Workflows, die manuelle Abläufe ersetzen und Daten zuverlässig zwischen den Tools synchronisieren",
       ],
-      tags: ["Airtable", "Make", "Automation", "BI"],
+      tags: ["Dashboards", "BI", "APIs", "Airtable", "Make"],
     },
     {
       period: "Sep 2022 – Jul 2024",
