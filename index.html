@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Persönliche Website – Erfahrung und Projekte" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Theme vor dem Rendern setzen (kein Aufblitzen)
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo" id="logo"></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">Über mich</a>
+        <a href="#experience">Erfahrung</a>
+        <a href="#projects">Projekte</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Farbschema wechseln">◐</button>
+        <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="availability" id="availability"></p>
+      <h1 id="hero-name"></h1>
+      <p class="hero-role" id="hero-role"></p>
+      <p class="hero-tagline" id="hero-tagline"></p>
+      <div class="focus" id="focus"></div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">Projekte ansehen</a>
+        <a href="#contact" class="btn btn-ghost">Kontakt</a>
+      </div>
+    </section>
+
+    <section id="about" class="section wrap">
+      <h2 class="section-title"><span>01</span> Über mich</h2>
+      <div class="about-grid">
+        <div id="about-text" class="prose"></div>
+        <div id="stats" class="stats"></div>
+      </div>
+    </section>
+
+    <section id="experience" class="section wrap">
+      <h2 class="section-title"><span>02</span> Erfahrung</h2>
+      <ol id="timeline" class="timeline"></ol>
+    </section>
+
+    <section id="projects" class="section wrap">
+      <h2 class="section-title"><span>03</span> Projekte</h2>
+      <div id="project-filters" class="filters" role="group" aria-label="Projekte filtern"></div>
+      <div id="project-grid" class="project-grid"></div>
+    </section>
+
+    <section id="skills" class="section wrap">
+      <h2 class="section-title"><span>04</span> Skills</h2>
+      <div id="skill-groups" class="skill-groups"></div>
+      <div id="certs" class="certs"></div>
+    </section>
+
+    <section id="contact" class="section wrap contact">
+      <h2 class="section-title"><span>05</span> Kontakt</h2>
+      <p id="contact-text" class="contact-text"></p>
+      <a id="contact-email" class="btn btn-primary btn-lg"></a>
+      <div id="contact-links" class="contact-links"></div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p id="footer-text"></p>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
