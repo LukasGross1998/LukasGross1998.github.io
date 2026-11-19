@@ -290,3 +290,7 @@ a { color: inherit; }
   .rrow-label { grid-column: 1 / -1; }
   .rrow-track { grid-column: 1; }
 }
+.cert-body { flex: 1; }
+.cert-link { flex: none; font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; }
+.cert-link:hover { text-decoration: underline; }
+@media (max-width: 520px) { .cert { flex-wrap: wrap; } .cert-link { margin-left: 56px; } }

@@ -195,7 +195,7 @@ window.SITE = {
   ],
 
   certifications: [
-    { name: "AWS Certified Solutions Architect – Associate", issuer: "Amazon Web Services", date: "Nov 2026" },
+    { name: "AWS Certified Solutions Architect – Associate", issuer: "Amazon Web Services", date: "Nov 2026", url: "https://www.credly.com/badges/e82d01ac-7ec3-4d2d-b878-cfb8985330de" },
   ],
 
   contact: {

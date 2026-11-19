@@ -169,7 +169,8 @@
     ...(S.certifications || []).map((x) =>
       el("div", { class: "cert reveal" },
         el("span", { class: "cert-badge", "aria-hidden": "true" }, "✓"),
-        el("div", {}, el("strong", {}, x.name), el("span", {}, `${x.issuer} · ${x.date}`))))
+        el("div", { class: "cert-body" }, el("strong", {}, x.name), el("span", {}, `${x.issuer} · ${x.date}`)),
+        x.url ? el("a", { class: "cert-link", href: x.url, target: "_blank", rel: "noopener" }, "Nachweis ansehen ↗") : null))
   );
 
   // Kontakt
