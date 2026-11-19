@@ -131,7 +131,7 @@ window.SITE = {
         note: "Betrieb & Qualität: läuft in Docker-Containern; jede Änderung durchläuft eine CI-Pipeline mit Tests (≥ 85 % Abdeckung), Typprüfung und Architekturregeln. Es werden nur Werte genutzt, die durch eine Datenquelle belegt sind.",
       },
       links: [
-        { label: "GitHub", url: "" }, // Repo ist privat – URL eintragen, sobald es öffentlich ist: https://github.com/LukasGross1998/polymer-trade-flows
+        { label: "GitHub", url: "https://github.com/LukasGross1998/polymer-trade-flows" },
       ],
       featured: true,
     },
