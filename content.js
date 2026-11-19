@@ -34,12 +34,13 @@ window.SITE = {
       company: "Infor",
       location: "Remote (Leipzig)",
       points: [
+        "Modulverantwortlicher für das Modul Schnittstellen – fachlich und technisch zuständig für die Anbindung von Drittsystemen",
         "Entwicklung und Betreuung von REST-Schnittstellen mit JSON und XML, über die Drittsysteme an das ERP Infor CloudSuite angebunden werden",
         "Intensive Arbeit mit Oracle-Datenbanken: SQL-Abfragen für Datenanalyse, Fehlersuche und Datenabgleich zwischen ERP und angebundenen Systemen",
         "Mitarbeit am Umzug in die AWS European Sovereign Cloud",
         "Komponenten mit Amazon Kiro (KI-gestützte Entwicklungsumgebung) für die neue Cloud-Umgebung nutzbar machen",
       ],
-      tags: ["Infor CloudSuite", "ERP", "REST APIs", "JSON / XML", "Oracle SQL", "AWS", "Kiro"],
+      tags: ["Modulverantwortung", "Infor CloudSuite", "ERP", "REST APIs", "JSON / XML", "Oracle SQL", "AWS", "Kiro"],
     },
     {
       period: "Jul 2023 – Apr 2025",
