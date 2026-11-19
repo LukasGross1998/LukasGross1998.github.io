@@ -30,6 +30,14 @@
   });
   if (S.focus?.length) $("focus").append(el("span", { class: "focus-label" }, "Fokus"), ...S.focus.map((f) => el("span", { class: "focus-chip" }, f)));
 
+  // Entwicklung in Etappen
+  $("journey").append(...(S.journey || []).map((j, i) =>
+    el("li", { class: "journey-step reveal" + (j.current ? " current" : "") },
+      el("span", { class: "journey-period" }, j.period),
+      el("strong", {}, j.title),
+      el("span", { class: "journey-where" }, j.where),
+      el("p", {}, j.text))));
+
   // Über mich
   $("about-text").append(...S.about.map((p) => el("p", {}, p)));
   $("stats").append(...(S.stats || []).map((s) => el("div", { class: "stat" }, el("strong", {}, s.value), el("span", {}, s.label))));
@@ -47,9 +55,9 @@
     )
   );
 
-  // Projekte + Filter
+  // Projekte (kompakt, Details aufklappbar)
   const grid = $("project-grid");
-  const cards = S.projects.map((p) => {
+  S.projects.forEach((p) => {
     let media = null;
     const imgs = (p.images || []).map((x) => (typeof x === "string" ? { src: x, caption: "" } : x));
     if (imgs.length) {
@@ -133,37 +141,23 @@
             st.tech ? el("span", { class: "step-tech" }, st.tech) : null))),
         pl.note ? el("p", { class: "pipeline-note" }, pl.note) : null);
     }
+    const more = media || results || pipeline
+      ? el("details", { class: "project-more" },
+          el("summary", {}, "Details, Bilder & Technik"),
+          el("div", { class: "project-more-body" }, media, results, pipeline))
+      : null;
     const card = el("article", { class: "project reveal" + (p.featured ? " featured" : "") },
-      media,
       el("h3", {}, p.title),
       el("p", {}, p.summary),
       tags(p.tags),
-      results,
-      pipeline,
+      more,
       validLinks(p.links).length
         ? el("div", { class: "project-links" },
             validLinks(p.links).map((l) => el("a", { href: l.url, target: "_blank", rel: "noopener" }, `${l.label} ↗`)))
         : null
     );
-    card.dataset.tags = (p.tags || []).join("|");
     grid.append(card);
-    return card;
   });
-
-  const allTags = [...new Set(S.projects.flatMap((p) => p.tags || []))];
-  if (allTags.length > 1) {
-    const filters = $("project-filters");
-    const setFilter = (tag) => {
-      filters.querySelectorAll(".filter").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tag === tag)));
-      cards.forEach((c) => (c.hidden = tag !== "*" && !c.dataset.tags.split("|").includes(tag)));
-    };
-    ["*", ...allTags].forEach((t) => {
-      const b = el("button", { class: "filter", type: "button", "aria-pressed": String(t === "*") }, t === "*" ? "Alle" : t);
-      b.dataset.tag = t;
-      b.addEventListener("click", () => setFilter(t));
-      filters.append(b);
-    });
-  }
 
   // Skills
   $("skill-groups").append(

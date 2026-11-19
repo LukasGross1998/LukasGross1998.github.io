@@ -113,6 +113,38 @@ a { color: inherit; }
 .stat strong { display: block; font-size: 28px; letter-spacing: -0.02em; }
 .stat span { color: var(--muted); font-size: 14px; }
 
+/* ---------- Entwicklung (Etappen) ---------- */
+.journey { list-style: none; margin: 0 0 48px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; counter-reset: j; }
+.journey-step {
+  position: relative; display: flex; flex-direction: column; gap: 6px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px;
+}
+.journey-step:not(:last-child)::after {
+  content: "→"; position: absolute; right: -11px; top: 22px; z-index: 1; width: 10px; text-align: center;
+  color: var(--accent); font-size: 14px; line-height: 1;
+}
+.journey-step.current { border-style: dashed; border-color: var(--accent); background: var(--accent-soft); }
+.journey-period { font-family: var(--mono); font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
+.journey-step strong { font-size: 17px; letter-spacing: -0.01em; }
+.journey-where { font-size: 13px; color: var(--muted); font-weight: 500; }
+.journey-step p { margin: 4px 0 0; font-size: 14.5px; color: var(--muted); line-height: 1.55; }
+@media (max-width: 900px) {
+  .journey { grid-template-columns: 1fr 1fr; }
+  .journey-step::after { display: none; }
+}
+@media (max-width: 560px) { .journey { grid-template-columns: 1fr; } }
+
+/* ---------- Projekte kompakt ---------- */
+.project-more { border-top: 1px solid var(--border); padding-top: 14px; margin-top: 4px; }
+.project-more > summary {
+  cursor: pointer; font-size: 14px; font-weight: 600; color: var(--accent); list-style: none; display: inline-flex; gap: 8px; align-items: center;
+}
+.project-more > summary::-webkit-details-marker { display: none; }
+.project-more > summary::before { content: "+"; font-family: var(--mono); width: 14px; }
+.project-more[open] > summary::before { content: "–"; }
+.project-more-body { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+.project:hover { transform: none; }
+
 /* ---------- Timeline ---------- */
 .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
 .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--border); }

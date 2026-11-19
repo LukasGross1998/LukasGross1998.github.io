@@ -16,8 +16,8 @@ window.SITE = {
 
   about: [
     "Angefangen habe ich dort, wo Waren tatsächlich bewegt werden: als Werkstudent in der Lagerlogistik bei Daimler, in der Logistikplanung der BASF und mit meiner Bachelorarbeit zu nachhaltigen Logistikzentren bei BSH. Im Studium der Logistik und des Supply Chain Managements habe ich gelernt, wie eng Lager, Einkauf, Transport und Produktion zusammenhängen.",
-    "Dabei wurde mir schnell klar: Die spannendsten Hebel stecken in den Daten und in der Software dahinter. Also bin ich für den Master in Data Science and Advanced Analytics nach Lissabon gegangen, habe nebenher bei LECARE Dashboards und datengetriebene Software-Lösungen entwickelt und bin danach als Software-Entwickler bei Infor gelandet – einem Anbieter von ERP- und Unternehmenssoftware, unter anderem für Supply Chain und Produktion. Dort binde ich Systeme an die Infor CloudSuite an und arbeite täglich mit SQL auf Oracle-Datenbanken.",
-    "Für mich gehören beide Welten zusammen. Wer versteht, wie eine Lieferkette funktioniert, baut bessere Datenmodelle, Schnittstellen und Tools für sie. Genau das zeigt auch mein Supply-Chain-Dashboard, das Handels-, Schiffs- und Marktdaten zu einem Lagebild für Einkäufer verbindet.",
+    "Dabei wurde mir schnell klar: Die spannendsten Hebel stecken in den Daten und in der Software dahinter. Also bin ich für den Master in Data Science and Advanced Analytics nach Lissabon gegangen, habe nebenher bei LECARE Dashboards und datengetriebene Software-Lösungen entwickelt und bin danach als Software-Entwickler bei Infor gelandet – einem Anbieter von ERP- und Unternehmenssoftware, unter anderem für Supply Chain und Produktion. Dort bin ich Modulverantwortlicher für Schnittstellen, binde Drittsysteme an die Infor CloudSuite an und arbeite täglich mit SQL auf Oracle-Datenbanken.",
+    "Für mich gehören beide Welten zusammen. Wer versteht, wie eine Lieferkette funktioniert, baut bessere Datenmodelle, Schnittstellen und Tools für sie – und kann zwischen Fachbereich und IT übersetzen. Diese Brücke zu schlagen, ist der rote Faden in meiner Entwicklung.",
     "Als Nächstes zieht es mich tiefer in Cloud, Platform Engineering und AI Engineering: Plattformen bauen, auf denen Daten- und KI-Anwendungen zuverlässig laufen. Die Grundlage dafür ist die Zertifizierung als AWS Solutions Architect – Associate.",
   ],
 
@@ -25,6 +25,35 @@ window.SITE = {
     { value: "AWS", label: "Certified Solutions Architect" },
     { value: "M.Sc.", label: "Data Science · NOVA IMS" },
     { value: "5", label: "Unternehmen – von Logistik bis Software" },
+  ],
+
+  // Meine Entwicklung in Etappen (oben im Abschnitt "Meine Entwicklung")
+  journey: [
+    {
+      period: "2018 – 2022",
+      title: "Logistik & Supply Chain",
+      where: "Daimler · BASF · BSH · B.A. Logistik",
+      text: "Gelernt, wie Lager, Einkauf, Transport und Produktion ineinandergreifen – und wo Prozesse in der Praxis haken.",
+    },
+    {
+      period: "2022 – 2024",
+      title: "Daten & Analytics",
+      where: "M.Sc. NOVA IMS Lissabon · LECARE",
+      text: "Machine Learning und Zeitreihenanalyse im Master, im Job Daten in PostgreSQL modelliert und mit Power BI nutzbar gemacht.",
+    },
+    {
+      period: "seit 2024",
+      title: "Software & ERP",
+      where: "Infor",
+      text: "Modulverantwortlicher für Schnittstellen: Drittsysteme per REST an die Infor CloudSuite anbinden, täglich mit Oracle SQL.",
+    },
+    {
+      period: "nächster Schritt",
+      title: "Cloud & Plattform",
+      where: "AWS Solutions Architect · Sovereign Cloud",
+      text: "Plattformen bauen, auf denen Daten- und KI-Anwendungen zuverlässig laufen – Richtung Platform und AI Engineering.",
+      current: true,
+    },
   ],
 
   experience: [
